@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="繁星之海 Beyond These Stars 发电机不工作、没有电力连接、冶炼炉缺原料的手动排查清单，附官方 Wiki 和更新说明。">
+  <meta name="theme-color" content="#0e171d">
+  <link rel="canonical" href="https://yxhtl.github.io/beyond-these-stars-power-check/zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://yxhtl.github.io/beyond-these-stars-power-check/">
+  <title>繁星之海没电怎么办：发电机、电力连接与冶炼炉排查</title>
+  <link rel="alternate" hreflang="en" href="https://yxhtl.github.io/beyond-these-stars-power-check/">
+  <link rel="alternate" hreflang="zh-CN" href="https://yxhtl.github.io/beyond-these-stars-power-check/zh.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e171d'/%3E%3Cpath d='M18 3L7 19h8l-1 10 12-17h-9z' fill='%23c5ee9b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#checks">跳到供电排查</a>
+<header class="wrap masthead">
+  <a class="brand" href="zh.html"><span class="brand-icon" aria-hidden="true">ϟ</span><span>繁星之海<small>BEYOND THESE STARS · 供电排查</small></span></a>
+  <nav aria-label="页面导航"><a class="source-nav" href="#sources">查看依据</a><a class="lang" href="index.html" lang="en">English</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div><div class="eyebrow">繁星之海 / 前期工业</div><h1 id="title">发电机建好了，<br><span>怎么还是没电？</span></h1><p class="lead">先看建筑上的提示，再查一个具体环节。别一上来就把整片工业区拆了重建。</p><a class="cta" href="#checks">看看先查哪一步 ↗</a><p class="meta">独立整理 · 2026 年 10 月 18 日核对 · 无需登录</p></div>
+    <aside class="diagram" aria-label="生产流程示意，不是游戏里的建筑摆放图">
+      <div class="diagram-header"><span>前期工业 / 生产链</span><b>● 沿着链条查</b></div>
+      <div class="power-flow"><div class="machine"><span class="icon" aria-hidden="true">ϟ</span><strong>燃烧发电机</strong><small>燃料 → 电力 + 烟灰</small></div><span class="flow-arrow" aria-hidden="true">→</span><div class="machine"><span class="icon" aria-hidden="true">▥</span><strong>矿石冶炼炉</strong><small>矿石 + 电力 → 金属</small></div></div>
+      <p>先查连接，再查原料和产物空间。上游停工，下游可能跟着等电。</p><div class="diagram-foot">仅为流程示意 · 非游戏截图 · 非格子布局</div>
+    </aside>
+  </section>
+  <aside class="quick"><strong>先说答案</strong><p>还没解锁电线时，电力沿着相接的用电建筑传递。中间隔着道路或空地，就不算直接接触。</p><a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Power">官方 Wiki：电力机制 ↗</a></aside>
+  <section id="checks" aria-labelledby="checks-title">
+    <div class="section-head"><div><div class="eyebrow">01 / 手动排查</div><h2 id="checks-title">建筑现在提示什么？</h2></div><p>选最接近的一项，回游戏里核对。</p></div>
+    <noscript><p class="noscript">浏览器未启用 JavaScript：下面会显示全部四组排查步骤。</p></noscript>
+    <div class="diagnostics">
+      <div class="symptoms" role="group" aria-label="建筑现在提示什么？"><button type="button" data-symptom="connection" aria-controls="answer-connection" aria-pressed="true"><span class="num">01</span><span><strong>没有电力连接</strong><small>发电机和工厂连不上</small></span><span class="arrow" aria-hidden="true">↗</span></button>
+<button type="button" data-symptom="stopped" aria-controls="answer-stopped" aria-pressed="false"><span class="num">02</span><span><strong>发电机停了</strong><small>原本能用，后来不发电</small></span><span class="arrow" aria-hidden="true">↗</span></button>
+<button type="button" data-symptom="input" aria-controls="answer-input" aria-pressed="false"><span class="num">03</span><span><strong>缺少原料 / 没有空间</strong><small>冶炼炉不出金属</small></span><span class="arrow" aria-hidden="true">↗</span></button>
+<button type="button" data-symptom="moved" aria-controls="answer-moved" aria-pressed="false"><span class="num">04</span><span><strong>搬家后卡住</strong><small>建筑一直搬不完或建不完</small></span><span class="arrow" aria-hidden="true">↗</span></button></div>
+      <div class="answers" aria-live="polite" aria-atomic="true"><article class="answer" id="answer-connection" data-answer="connection" aria-labelledby="heading-connection"><span class="tag">先查建筑之间的连接</span><h3 id="heading-connection">离得近，不一定连上了。</h3><ol><li>没电线时，先查用电建筑有没有连续相接。中间隔着道路或空地，连接就可能断开。</li><li>最简单的前期检查：让矿石冶炼炉直接贴着燃烧发电机，再在游戏里看连接提示。</li><li>已经有电线？检查沿途是否被树木或建筑挡住。官方 Wiki 说明，产出第一批铜锭后会解锁电线。</li></ol><div class="source">对照原始依据<br><a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Power">电力机制 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Power_Lines">电线 ↗</a></div></article>
+<article class="answer" id="answer-stopped" data-answer="stopped" aria-labelledby="heading-stopped"><span class="tag">先看发电机本身</span><h3 id="heading-stopped">有燃料，也要有地方放烟灰。</h3><ol><li>检查燃料。燃烧发电机使用木材或木材废料。</li><li>检查烟灰产物栏。烟灰存满会让发电停止；安排能接收烟灰的储存空间。</li><li>恢复发电后，再看下游建筑。如果仍停工，先读发电机自身提示，别直接认定是电网断了。</li></ol><div class="source">对照原始依据<br><a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Burner_Generator">燃烧发电机 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Storage_Shed">储存棚 ↗</a></div></article>
+<article class="answer" id="answer-input" data-answer="input" aria-labelledby="heading-input"><span class="tag">一次只追一种缺料</span><h3 id="heading-input">先读冶炼炉自己的状态。</h3><ol><li>分清缺的是电力还是矿石。矿石冶炼炉需要两者才能产出金属。</li><li>缺电就回查相连的发电机；缺矿石就查矿场和运输路径。</li><li>如果是产物存满，检查储存建筑及其资源分配设置。先查这个，再决定是否加盖冶炼炉。</li></ol><div class="source">对照原始依据<br><a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Ore_Smelter">矿石冶炼炉 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Storage_Shed">储存棚 ↗</a></div></article>
+<article class="answer" id="answer-moved" data-answer="moved" aria-labelledby="heading-moved"><span class="tag">核对补丁与施工条件</span><h3 id="heading-moved">搬不完，可能是另一类问题。</h3><ol><li>先看官方最新热修说明。第 1、2 次热修处理过建筑移动问题；第 1 次还把发电机轮廓从污染范围改成了供电范围。</li><li>如果是建筑没建完，检查施工材料能否送达。上游建筑暂停，可能让施工一直等料。</li><li>当前版本仍卡住，用游戏内 F11 报告，保留存档。这页不能判断存档本身有没有出错。</li></ol><div class="source">对照原始依据<br><a href="https://steamcommunity.com/app/2295060/announcements/">官方热修说明 ↗</a> <a href="https://steamcommunity.com/app/2295060/discussions/0/601911716272542834/">开发者支持 / F11 说明 ↗</a></div></article></div>
+    </div><p class="after">这是需要你在游戏里核对的步骤，不会自动检测故障。当前这项没问题，再看下一项相关提示。</p>
+  </section>
+  <section class="facts" aria-label="三个检查要点"><article class="fact"><span class="number">01 /</span><h3>看连接，别只看距离</h3><p>前期可以先试一个发电机贴一个用电建筑。复杂布局以游戏里实际显示的连接为准。</p></article><article class="fact"><span class="number">02 /</span><h3>发电也会产生副产物</h3><p>储存是生产链的一环。产物满了，先查去处，别急着拆建筑。</p></article><article class="fact"><span class="number">03 /</span><h3>核对你正在玩的版本</h3><p>发售期补丁可能改变显示。第 1 次热修已经纠正过发电机轮廓。</p></article></section>
+  <section class="faq" aria-labelledby="faq-title"><div class="eyebrow">02 / FAQ</div><h2 id="faq-title">“没有电”背后的几个问题。</h2><details><summary>需要安排小人搬运电力吗？</summary><p>不用。官方电力页面说明，电力在相连的用电建筑间自动传递；其他资源才需要运输。</p></details><details><summary>是不是必须重开存档？</summary><p>目前没有依据说明重开能解决你的问题。先检查提示和最新补丁；持续出现的异常用 F11 报告。</p></details><details><summary>官方 Wiki 两页说法为什么不太一样？</summary><p>电力总页描述的是连续相接的建筑链；发电机页讲的是直接接触发电机的简单布局。这里按总页的规则解释，并把直接接触作为第一步检查，不当成唯一可用的布局。</p></details><details><summary>这工具会读取游戏或上传我的选择吗？</summary><p>不会。点击只切换当前页面内容，不保存、不上传。没有统计脚本、账号、付费接口，也不需要上传存档。</p></details></section>
+  <section class="sources" id="sources" aria-labelledby="sources-title"><div class="eyebrow">03 / 原始依据</div><h2 id="sources-title">每一步，都留着核对入口。</h2><div class="source-grid"><a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Power">电力机制 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Burner_Generator">燃烧发电机 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Power_Lines">电线 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Storage_Shed">储存棚 ↗</a> <a href="https://wiki.hoodedhorse.com/Beyond_These_Stars/Ore_Smelter">矿石冶炼炉 ↗</a> <a href="https://steamcommunity.com/app/2295060/announcements/">官方热修说明 ↗</a></div><p class="scope">独立玩家向指南。机制依据官方 Wiki 和更新说明整理，未独立进游戏实测。排查顺序是本页的整理，不是开发者保证有效的修复方案。中文建筑名为便于阅读的译名，以游戏内名称为准。《繁星之海》及相关商标归各自权利人所有。</p></section>
+</main>
+<footer class="wrap"><span>繁星之海 / 供电排查</span><span>资料核对 · 2026-10-18</span></footer>
+</body>
+</html>
+
